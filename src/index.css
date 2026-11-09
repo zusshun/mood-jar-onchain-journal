@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'DM Sans', ui-sans-serif, sans-serif;
+  color: #3b3350;
+  background-color: #fbf5ea;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Soft ambient wash behind the whole app */
+.mj-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60rem 40rem at 8% -10%, rgba(205, 187, 241, 0.45), transparent 60%),
+    radial-gradient(50rem 36rem at 100% 100%, rgba(255, 198, 163, 0.4), transparent 60%),
+    #fbf5ea;
+}
+
+:focus-visible {
+  outline: 2px solid #3b3350;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
